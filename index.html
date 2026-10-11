@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js")</script>
+  <title>Даниил Демьянов — сайты для малого бизнеса</title>
+  <meta name="description" content="Проектирую и делаю сайты для малого бизнеса: дизайн, вёрстка, мобильная версия и запуск. Омск.">
+  <meta property="og:title" content="Даниил Демьянов — сайты для малого бизнеса">
+  <meta property="og:description" content="Дизайн, вёрстка и запуск сайта одним человеком, без посредников.">
+  <meta property="og:image" content="images/ns-hero.jpg">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%23000'/><text x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23f6f6f3'>Д</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ Заставка ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__cols"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="loader__stage">
+      <div class="loader__frame" id="loaderFrame"></div>
+    </div>
+    <div class="loader__foot">
+      <span class="loader__name">Демьянов Даниил<br>Сайты для малого бизнеса</span>
+      <span class="loader__count" id="loaderCount">0</span>
+    </div>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="top" id="top">
+    <a href="#hero" class="top__logo">Демьянов Даниил</a>
+    <nav class="top__nav" aria-label="Разделы">
+      <a href="#work">Работы</a>
+      <a href="#process">Подход</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a href="#" class="pill" data-tg>Обсудить проект</a>
+  </header>
+
+  <main>
+    <!-- ============ Первый экран ============ -->
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <figure class="hero__photo">
+        <img src="images/danil-hero.jpg" alt="Даниил Демьянов" width="1230" height="1400" fetchpriority="high">
+      </figure>
+      <h1 class="hero__title" id="heroTitle" aria-label="Демьянов Даниил">
+        <span class="line line--1" aria-hidden="true"><span>Демьянов</span></span>
+        <span class="line line--2" aria-hidden="true"><span>Даниил</span></span>
+      </h1>
+      <div class="hero__bottom">
+        <p class="hero__lead">Проектирую и делаю сайты для малого бизнеса. Дизайн, вёрстка и запуск одним человеком, без посредников и шаблонов.</p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--light">Смотреть работы</a>
+          <a href="#" class="btn btn--line" data-tg>Написать в Telegram</a>
+        </div>
+      </div>
+      <div class="hero__status"><i></i>Принимаю новые проекты</div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="ticker">
+        <div class="ticker__group"><span>Дизайн</span><i></i><span>Вёрстка</span><i></i><span>Мобильная версия</span><i></i><span>Анимации</span><i></i><span>Запуск</span><i></i></div>
+      </div>
+    </div>
+
+    <!-- ============ Работы ============ -->
+    <section class="work" id="work" aria-labelledby="workTitle">
+      <div class="work__head">
+        <h2 class="work__title" id="workTitle">Работы</h2>
+        <p class="work__hint">Наведите курсор на сайт, и он пролистается сам. Или откройте его прямо здесь.</p>
+      </div>
+      <div id="cases"></div>
+
+      <div class="queue">
+        <h3 class="queue__title">В работе</h3>
+        <ul class="queue__list" id="queue"></ul>
+      </div>
+    </section>
+
+    <!-- ============ Подход ============ -->
+    <section class="process" id="process" aria-labelledby="processTitle">
+      <div class="process__side">
+        <h2 class="process__title" id="processTitle">Как я работаю</h2>
+        <p class="process__lead">Одностраничные сайты и сайты-визитки: дизайн, вёрстка, мобильная версия и публикация в интернете.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="steps__n">1</span><div><h3>Знакомство</h3><p>Узнаю, чем занимается бизнес, кто ваши клиенты и что должен делать сайт.</p></div></li>
+        <li><span class="steps__n">2</span><div><h3>Договорённости</h3><p>Называю срок и стоимость до начала работы. Всё фиксируем в переписке.</p></div></li>
+        <li><span class="steps__n">3</span><div><h3>Первый экран</h3><p>Показываю, как будет выглядеть сайт, ещё до полной сборки. Правки вносим сразу.</p></div></li>
+        <li><span class="steps__n">4</span><div><h3>Сборка и проверка</h3><p>Собираю сайт и проверяю его на телефоне и на компьютере.</p></div></li>
+        <li><span class="steps__n">5</span><div><h3>Запуск</h3><p>Публикую сайт в интернете и объясняю, как менять тексты и цены.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="reasons" aria-labelledby="reasonsTitle">
+      <h2 class="reasons__title" id="reasonsTitle">Почему со мной удобно</h2>
+      <dl class="reasons__list">
+        <div class="reasons__row"><dt>Работаю напрямую</dt><dd>Вы общаетесь со мной, а не с менеджером. Каждое решение объясняю простыми словами.</dd></div>
+        <div class="reasons__row"><dt>Показываю по ходу</dt><dd>Вы видите результат на каждом этапе, а не только в конце.</dd></div>
+        <div class="reasons__row"><dt>Называю срок заранее</dt><dd>Договорились о дате, значит, держу её. Дисциплина для меня не слово.</dd></div>
+        <div class="reasons__row"><dt>Честно о границах</dt><dd>Делаю одностраничные сайты и визитки. Сложные интернет-магазины и системы с базой данных не беру: лучше сделать меньше и хорошо.</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ Обо мне ============ -->
+    <section class="about" id="about" aria-labelledby="aboutTitle">
+      <div class="about__side">
+        <h2 class="about__title" id="aboutTitle">Дисциплина — мой главный инструмент</h2>
+      </div>
+      <div class="about__text">
+        <p class="about__lead">Зал научил меня простой вещи: результат даёт не настроение, а повторение. С кодом то же самое. Я постоянно что-то делаю, пробую новые проекты, ломаю и исправляю.</p>
+        <p class="about__p">Сайты для малого бизнеса — мой способ расти быстрее: на реальных задачах, а не только на теории. Веду TikTok и постоянно учусь.</p>
+        <ol class="path">
+          <li><strong>Омский лицей №92</strong><span>Окончил школу.</span></li>
+          <li><strong>ОмГТУ</strong><span>Программная инженерия, первый курс.</span></li>
+          <li><strong>Школа 21</strong><span>Прошёл бассейн, дальше основной этап обучения.</span></li>
+          <li><strong>Сайты для бизнеса</strong><span>Первые проекты, портфолио растёт.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Отзывы ============ -->
+    <section class="reviews" id="reviews" aria-labelledby="reviewsTitle">
+      <h2 class="reviews__title" id="reviewsTitle">Отзывы</h2>
+      <div id="reviewList"></div>
+      <div class="reviews__empty" id="reviewEmpty">
+        <p>Здесь появятся отзывы первых клиентов.</p>
+        <p class="reviews__offer">Два ближайших проекта делаю бесплатно. Взамен прошу честный отзыв и разрешение показать сайт в портфолио.</p>
+        <a href="#" class="btn btn--dark" data-tg>Занять место</a>
+      </div>
+    </section>
+
+    <!-- ============ Контакты ============ -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <h2 class="visually-hidden" id="contactTitle">Контакты</h2>
+      <a href="#" class="contact__big" data-tg>
+        <span class="contact__line">Обсудим</span>
+        <span class="contact__line">ваш проект<span class="contact__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </a>
+      <div class="contact__row">
+        <p class="contact__note">Отвечаю в Telegram в течение дня. Расскажите, чем занимается бизнес, и я предложу, каким может быть сайт.</p>
+        <div class="contact__links">
+          <a href="#" class="btn btn--light" data-tg>Telegram @assalameu</a>
+          <a href="#" class="btn btn--line" data-tt>TikTok @assalameu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Даниил Демьянов</span>
+    <span>Омск</span>
+    <a href="#hero">Наверх</a>
+  </footer>
+
+  <dialog class="live" id="live" aria-label="Сайт целиком">
+    <div class="live__bar">
+      <span class="live__host" id="liveHost"></span>
+      <a class="live__open" id="liveOpen" href="#" target="_blank" rel="noopener">Открыть в новой вкладке</a>
+      <button type="button" class="live__close" id="liveClose" autofocus>Закрыть</button>
+    </div>
+    <iframe id="liveFrame" title="Сайт проекта" loading="lazy"></iframe>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
