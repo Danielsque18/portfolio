@@ -170,6 +170,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .hero__photo {
   position: absolute;
   z-index: 0;
+  pointer-events: none;
   top: 0; right: 0; bottom: 0;
   width: min(50vw, 820px);
   overflow: hidden;
@@ -210,6 +211,8 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .line--2 { --d: .18s; }
 
 .hero__bottom {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -222,6 +225,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .hero__status {
   position: absolute;
+  z-index: 2;
   left: var(--pad);
   top: clamp(90px, 13vh, 140px);
   display: flex; align-items: center; gap: 10px;
@@ -276,6 +280,10 @@ button { font: inherit; color: inherit; background: none; border: 0; }
     var(--stage, #1a1a1a);
   overflow: hidden;
 }
+.stage--light .btn--light { background: var(--black); color: var(--white); }
+.stage--light .btn--light:hover { background: #222; }
+.stage--light .btn--line { color: var(--black); border-color: rgba(0, 0, 0, .28); }
+.stage--light .btn--line:hover { border-color: var(--black); }
 .stage__glow {
   position: absolute; inset: auto -10% -40% -10%; height: 70%;
   background: radial-gradient(50% 50% at 50% 50%, var(--stage-accent, transparent), transparent 70%);
