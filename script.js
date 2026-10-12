@@ -17,8 +17,8 @@
       title: "North Shear",
       type: "Барбершоп в Омске. Лендинг с прайсом-калькулятором и записью",
       status: "live",
-      url: "https://danielsque18.github.io/north-shear/",
-      host: "danielsque18.github.io/north-shear",
+      url: "https://danielsque18.github.io/north-sh/",
+      host: "danielsque18.github.io/north-sh",
       local: "../north-barber/index.html",      // когда портфолио открыто с компьютера как файл
       desktop: "images/north-shear-full.jpg",   // длинный скриншот всей страницы
       mobile: "images/north-shear-mobile.jpg",  // длинный скриншот мобильной версии
@@ -39,8 +39,58 @@
         ["images/ns-booking.jpg", "Запись", "Форма с выбором услуг и дня, рядом контакты на фоне кресла."]
       ]
     },
-    { title: "Детейлинг", type: "Студия детейлинга авто", status: "soon", note: "Скоро в портфолио" },
-    { title: "Кофейня",   type: "Кофе и десерты",          status: "soon", note: "Скоро в портфолио" }
+    {
+      title: "Lucido",
+      type: "Детейлинг-ателье в Омске. Премиальный сайт с плавной прокруткой и лампой осмотра",
+      status: "live",
+      url: "https://danielsque18.github.io/detailing/",
+      host: "danielsque18.github.io/detailing",
+      local: "../detailing/index.html",
+      desktop: "images/lucido-full.jpg",
+      mobile: "images/lucido-mobile.jpg",
+      color: "#16120e",
+      glow: "#b5121b",
+      task: "Показать ателье дорого и спокойно, как каталог автомобильного бренда, и довести посетителя до записи на бесплатный осмотр.",
+      did: "Заставка, плавная прокрутка, услуги стопкой карточек, лампа осмотра, которая высвечивает лак под курсором, горизонтальная галерея, пакеты с пересчётом цены под кузов, форма записи.",
+      result: "Готовый адаптивный сайт. Цена и состав пакетов видны до звонка, а лампа объясняет, за что клиент платит.",
+      palette: [["Кость", "#f2eee6"], ["Эспрессо", "#16120e"], ["Россо", "#b5121b"]],
+      fonts: ["Prata", "Manrope"],
+      tags: ["HTML", "CSS", "JavaScript", "GSAP", "Lenis", "Адаптив"],
+      details: [
+        ["images/lc-hero.jpg", "Первый экран", "После заставки буквы названия поднимаются по одной, фото медленно приближается."],
+        ["images/lc-manifest.jpg", "Манифест", "Текст проявляется слово за словом по мере прокрутки."],
+        ["images/lc-services.jpg", "Услуги", "Карточки ложатся друг на друга стопкой, предыдущая отходит в тень."],
+        ["images/lc-light.jpg", "Лампа осмотра", "Курсор работает как инспекционная лампа и высвечивает лак на тёмном крыле."],
+        ["images/lc-gallery.jpg", "Галерея", "Вертикальная прокрутка превращается в горизонтальную ленту автомобилей."],
+        ["images/lc-prices.jpg", "Стоимость", "Переключатель кузова пересчитывает цены всех пакетов."]
+      ]
+    },
+    {
+      title: "Квеври",
+      type: "Грузинский ресторан в Омске. Видео, WebGL и живая подача вечера",
+      status: "live",
+      url: "https://danielsque18.github.io/restaurant-/",
+      host: "danielsque18.github.io/restaurant-",
+      local: "../restaurant/index.html",
+      desktop: "images/kvevri-full.jpg",
+      mobile: "images/kvevri-mobile.jpg",
+      color: "#0c0806",
+      glow: "#a3162b",
+      task: "Передать атмосферу грузинского вечера ещё до визита: вино, огонь, застолье и танцы, и довести гостя до брони стола.",
+      did: "Заставка, где вино наполняет грузинское слово, видео и угольки в первом экране, окно в ночной Тбилиси, которое раскрывается при прокрутке, меню с «жидким» переходом между блюдами на WebGL, слово «Огонь» с видео пламени внутри букв, сцена танцев, бронь с выбором даты и гостей.",
+      result: "Готовый адаптивный сайт. Посетитель видит меню, цены и атмосферу вечера и бронирует стол в одной форме.",
+      palette: [["Ночь", "#0c0806"], ["Свеча", "#d9a35b"], ["Саперави", "#7a0f22"], ["Крем", "#f1e4cc"]],
+      fonts: ["Forum", "Noto Serif Georgian", "Golos Text"],
+      tags: ["HTML", "CSS", "JavaScript", "WebGL", "GSAP", "Видео"],
+      details: [
+        ["images/kv-hero.jpg", "Первый экран", "Вино льётся в бокал, над ним поднимаются угольки, название собирается по буквам."],
+        ["images/kv-portal.jpg", "Окно в Тбилиси", "Арка с ночным городом раскрывается на весь экран, пока страница прокручивается."],
+        ["images/kv-menu.jpg", "Меню", "Фото блюд перетекают друг в друга через «жидкий» эффект на WebGL."],
+        ["images/kv-fire.jpg", "Огонь", "Видео пламени видно только сквозь буквы огромного слова."],
+        ["images/kv-friday.jpg", "Пятница", "Кадры с танцами раскрываются по очереди, как в комиксе."],
+        ["images/kv-footer.jpg", "Гаумарджос", "Финал с грузинской вязью в цветах свечи и вина."]
+      ]
+    }
   ];
 
   /* ===== ОТЗЫВЫ: добавляйте блок сюда (пока пусто) =====
@@ -96,6 +146,7 @@
 
     // сцена: ноутбук + телефон
     var stage = el("div", "stage");
+    if (p.light) stage.classList.add("stage--light");
     if (p.color) stage.style.setProperty("--stage", p.color);
     if (p.glow) stage.style.setProperty("--stage-accent", p.glow);
     stage.appendChild(el("div", "stage__glow"));
@@ -200,6 +251,9 @@
     cases.appendChild(c);
     shows.push({ card: c, stage: stage, browser: browser, bview: bview, bimg: bimg, phone: phone, pview: pview, pimg: pimg });
   });
+
+  // блок «В работе» нужен, только если в нём что-то есть
+  if (!queue.children.length) queue.closest(".queue").hidden = true;
 
   /* насколько прокручивать длинные скриншоты внутри экранов */
   function setShift() {
