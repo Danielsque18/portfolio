@@ -14,6 +14,37 @@
      Остальное (color, palette, fonts, details и т. д.) можно не заполнять. */
   var PROJECTS = [
     {
+      title: "SEDOY",
+      type: "Барбершоп в Омске. Сайт со своей админкой, записью через YClients и собственным доменом",
+      status: "live",
+      badge: "Реальный заказ · запущен в октябре 2026",
+      url: "https://barbershop-sedoy.ru/",
+      host: "barbershop-sedoy.ru",
+      desktop: "images/sedoy-full.jpg",
+      mobile: "images/sedoy-mobile.jpg",
+      color: "#0a0a0b",
+      glow: "#d6e8ff",
+      task: "Перенести на сайт атмосферу зала: чёрные стены, LED-рамки на потолке, неоновую вывеску. Довести клиента до онлайн-записи к нужному мастеру. Владелица должна сама менять цены, фото, отзывы и акции.",
+      did: "Первый экран: потолок из LED-рамок в перспективе и вывеска шрифтом их логотипа, которая загорается при загрузке. Калькулятор по мастерам: выбранные услуги сразу открываются в записи YClients. Мастера, акции, абонементы, настоящие отзывы с Яндекса, 2ГИС и YClients, приложение для iPhone и Android с QR-кодом. Своя админка на PHP с резервными копиями. Cookie-баннер и политика конфиденциальности по 152-ФЗ.",
+      result: "Сайт запущен на barbershop-sedoy.ru, домен и хостинг оформлены на владельца. От первого демо до запуска 4 дня и 4 раунда правок. Сайт меняют сами, без программиста.",
+      quote: {
+        text: "Админка понятная: цены, фото, отзывы и акции меняем сами, без программиста. Даниил внимательно относится ко всем пожеланиям, быстро вносит правки. С ним было приятно иметь дело. Рекомендую!",
+        who: "Екатерина, барбершоп SEDOY"
+      },
+      palette: [["Стена", "#0a0a0b"], ["LED-свет", "#eef5ff"], ["Серебро", "#c9ccd2"], ["Дерево", "#9a6a45"]],
+      fonts: ["Oswald", "Manrope"],
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "YClients", "Адаптив", "152-ФЗ"],
+      details: [
+        ["images/sd-hero.jpg", "Первый экран", "Потолок из LED-рамок, как в их зале. При загрузке рамки загораются по очереди, следом вспыхивает неоновая вывеска."],
+        ["images/sd-about.jpg", "О нас", "Фото настоящего зала приближается при прокрутке, как будто заходишь внутрь."],
+        ["images/sd-calc.jpg", "Калькулятор и запись", "Выбираете мастера и услуги, чек считает сумму. Кнопка открывает YClients с уже выбранными мастером и услугами."],
+        ["images/sd-masters.jpg", "Мастера", "Чёрно-белые портреты оживают в цвете, у каждого рейтинг и кнопка записи именно к нему."],
+        ["images/sd-promo.jpg", "Акции", "Скидка именинникам и кэшбэк показаны наглядно, тексты акций меняются в админке."],
+        ["images/sd-app.jpg", "Приложение", "QR-код переключается между iPhone и Android, рядом список того, что умеет приложение."],
+        ["images/sd-admin.jpg", "Админка", "Цены, мастера, фото, акции, отзывы и контакты меняются без программиста. Пароль, защита от подбора, 30 резервных копий."]
+      ]
+    },
+    {
       title: "North Shear",
       type: "Барбершоп в Омске. Лендинг с прайсом-калькулятором и записью",
       status: "live",
@@ -95,7 +126,16 @@
 
   /* ===== ОТЗЫВЫ: добавляйте блок сюда (пока пусто) =====
      Пример: { name: "Имя клиента", role: "Барбершоп North Shear", text: "Текст отзыва" } */
-  var REVIEWS = [];
+  var REVIEWS = [
+    {
+      name: "Екатерина",
+      role: "барбершоп SEDOY, Омск",
+      url: "https://barbershop-sedoy.ru/",
+      host: "barbershop-sedoy.ru",
+      lead: "Даниил смог перенести стиль нашего барбершопа на сайт. С ним было приятно иметь дело. Рекомендую!",
+      text: "Обратились к Даниилу за созданием сайта для барбершопа SEDOY. Даниил смог перенести стиль нашего барбершопа на сайт: интерьер, вывеску, которая загорается на первом экране, цветовая гамма. На сайте удобный интерфейс, калькулятор цен, интеграция с YClients, что позволяет клиенту записываться онлайн, ссылки для скачивания мобильного приложения на ios и android, контакты и другая необходимая информация.\nАдминка понятная: цены, фото, отзывы и акции меняем сами, без программиста. Даниил внимательно относится ко всем пожеланиям, быстро вносит правки, помогает с доменом и хостингом, всё оформлено на нас. Сайт был готов уже через пару дней. С ним было приятно иметь дело. Рекомендую!\nДаниил, спасибо за сотрудничество!"
+    }
+  ];
 
   /* ===== Дальше код трогать не нужно ===== */
   function el(tag, cls, text) {
@@ -141,7 +181,15 @@
     var head = el("header", "case__head");
     head.appendChild(el("span", "case__index", String(liveCount).padStart(2, "0")));
     head.appendChild(el("h3", "case__name", p.title));
-    head.appendChild(el("p", "case__type", p.type));
+    var typeBox = el("div", "case__type");
+    if (p.badge) {
+      var badge = el("span", "case__badge");
+      badge.appendChild(el("i"));
+      badge.appendChild(document.createTextNode(p.badge));
+      typeBox.appendChild(badge);
+    }
+    typeBox.appendChild(el("p", "", p.type));
+    head.appendChild(typeBox);
     c.appendChild(head);
 
     // сцена: ноутбук + телефон
@@ -191,7 +239,17 @@
       d.appendChild(el("dd", "", x[1]));
       facts.appendChild(d);
     });
-    body.appendChild(facts);
+    var main = el("div", "case__main");
+    main.appendChild(facts);
+    if (p.quote) {
+      var q = el("blockquote", "case__quote");
+      q.appendChild(el("p", "", "«" + p.quote.text + "»"));
+      var qa = el("a", "", p.quote.who + " · полный отзыв ↓");
+      qa.href = "#reviews";
+      q.appendChild(qa);
+      main.appendChild(q);
+    }
+    body.appendChild(main);
 
     var kit = el("div", "kit");
     if (p.palette) {
@@ -329,14 +387,28 @@
   var reviewList = document.getElementById("reviewList");
   REVIEWS.forEach(function (r) {
     var item = el("blockquote", "review");
-    item.appendChild(el("p", "review__text", r.text));
+    var mark = el("span", "review__mark", "“");
+    mark.setAttribute("aria-hidden", "true");
+    item.appendChild(mark);
+    var body = el("div", "review__body");
+    if (r.lead) body.appendChild(el("p", "review__text", "«" + r.lead + "»"));
+    r.text.split("\n").forEach(function (t) { body.appendChild(el("p", r.lead ? "review__p" : "review__text", t)); });
+    item.appendChild(body);
     var who = el("p", "review__who");
-    who.appendChild(el("strong", "", r.name));
-    if (r.role) who.appendChild(document.createTextNode(", " + r.role));
+    var name = el("span");
+    name.appendChild(el("strong", "", r.name));
+    if (r.role) name.appendChild(document.createTextNode(", " + r.role));
+    who.appendChild(name);
+    if (r.url) {
+      var link = el("a", "review__link", r.host || r.url);
+      link.href = r.url; link.target = "_blank"; link.rel = "noopener";
+      who.appendChild(link);
+    }
     item.appendChild(who);
     reviewList.appendChild(item);
   });
-  if (REVIEWS.length) document.getElementById("reviewEmpty").hidden = true;
+  // когда отзывы есть, блок под ними зовёт стать следующим клиентом
+  if (REVIEWS.length) document.querySelector("#reviewEmpty p").textContent = "Следующим может быть ваш сайт.";
 
   /* ---------- Буквы имени в первом экране ---------- */
   document.querySelectorAll(".hero__title .line > span").forEach(function (s) {
@@ -421,6 +493,95 @@
     });
     if (ho) ho.observe(h); else h.classList.add("is-in");
   });
+
+  /* ---------- Имя в первом экране: буквы у курсора «надуваются» ---------- */
+  var heroEl = document.getElementById("hero");
+  var chars = Array.prototype.slice.call(document.querySelectorAll(".hero__title .ch"));
+  if (fine && !calm && heroEl && chars.length) {
+    var hx = -9999, hy = -9999, weights = chars.map(function () { return 400; }), heroLoop = false;
+    function pump() {
+      var still = true;
+      chars.forEach(function (c, i) {
+        var r = c.getBoundingClientRect();
+        var d = Math.hypot(r.left + r.width / 2 - hx, r.top + r.height / 2 - hy);
+        var k = Math.max(0, 1 - d / 320);
+        var goal = 400 + 500 * k * k;
+        weights[i] += (goal - weights[i]) * 0.16;
+        if (Math.abs(goal - weights[i]) > 0.5) still = false;
+        c.style.setProperty("--w", weights[i].toFixed(0));
+      });
+      heroLoop = !still;
+      if (heroLoop) requestAnimationFrame(pump);
+    }
+    function kick() { if (!heroLoop) { heroLoop = true; requestAnimationFrame(pump); } }
+    heroEl.addEventListener("mousemove", function (e) { hx = e.clientX; hy = e.clientY; kick(); });
+    heroEl.addEventListener("mouseleave", function () { hx = hy = -9999; kick(); });
+  }
+
+  /* ---------- «Обо мне»: слова проявляются при прокрутке ---------- */
+  var lead = document.querySelector(".about__lead");
+  var leadWords = [];
+  if (lead && !calm) {
+    var words = lead.textContent.trim().split(/\s+/);
+    lead.textContent = "";
+    lead.classList.add("reveal");
+    words.forEach(function (w) {
+      var sp = el("span", "rw", w);
+      lead.appendChild(sp); lead.appendChild(document.createTextNode(" "));
+      leadWords.push(sp);
+    });
+  }
+
+  /* ---------- «Обсудим ваш проект»: контур заливается по мере прокрутки ---------- */
+  var contactBig = document.querySelector(".contact__big");
+
+  var fxBusy = false;
+  function paintFx() {
+    fxBusy = false;
+    var vh = window.innerHeight;
+    if (leadWords.length) {
+      var r = lead.getBoundingClientRect();
+      var p = (vh * 0.85 - r.top) / (r.height + vh * 0.3);
+      var n = Math.round(Math.min(Math.max(p, 0), 1) * leadWords.length);
+      leadWords.forEach(function (w, i) { if (w.classList.contains("is-on") !== i < n) w.classList.toggle("is-on", i < n); });
+    }
+    if (contactBig && !calm) {
+      var c = contactBig.getBoundingClientRect();
+      var q = Math.min(Math.max((vh * 0.95 - c.top) / (c.height + vh * 0.25), 0), 1) * 2;
+      contactBig.style.setProperty("--fill1", (Math.min(q, 1) * 100).toFixed(1) + "%");
+      contactBig.style.setProperty("--fill2", (Math.min(Math.max(q - 1, 0), 1) * 100).toFixed(1) + "%");
+    }
+  }
+  window.addEventListener("scroll", function () {
+    if (!fxBusy) { fxBusy = true; requestAnimationFrame(paintFx); }
+  }, { passive: true });
+  window.addEventListener("resize", paintFx);
+  paintFx();
+
+  /* ---------- «Как я работаю»: свет идёт по линии сверху вниз ----------
+     точка света — 60% высоты экрана; пройденные шаги остаются гореть */
+  var track = document.getElementById("track");
+  var trackFill = document.getElementById("trackFill");
+  var trackSteps = track ? Array.prototype.slice.call(track.querySelectorAll(".steps li")) : [];
+  var trackBusy = false;
+  function paintTrack() {
+    trackBusy = false;
+    var r = track.getBoundingClientRect();
+    var y = window.innerHeight * 0.6 - r.top;
+    trackFill.style.setProperty("--p", Math.min(Math.max(y / r.height, 0), 1).toFixed(4));
+    trackSteps.forEach(function (li) {
+      var on = li.offsetTop + 14 <= y;
+      if (li.classList.contains("is-on") !== on) li.classList.toggle("is-on", on);
+    });
+  }
+  if (track) {
+    track.classList.add("is-live");
+    window.addEventListener("scroll", function () {
+      if (!trackBusy) { trackBusy = true; requestAnimationFrame(paintTrack); }
+    }, { passive: true });
+    window.addEventListener("resize", paintTrack);
+    paintTrack();
+  }
 
   /* ---------- Прокрутка: полоса прогресса и параллакс фото ---------- */
   var bar = document.getElementById("progress");

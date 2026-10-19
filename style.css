@@ -13,7 +13,7 @@
   --line: rgba(246, 246, 243, .16);
   --line-dark: rgba(0, 0, 0, .14);
 
-  --display: "Oranienbaum", "Times New Roman", serif;
+  --display: "Unbounded", "Arial Black", sans-serif;
   --body: "Onest", "Segoe UI", Arial, sans-serif;
 
   --pad: clamp(16px, 4vw, 64px);
@@ -104,8 +104,9 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .loader__name { font-size: 14px; line-height: 1.5; color: var(--fog); }
 .loader__count {
   font-family: var(--display);
-  font-size: clamp(110px, 22vw, 360px);
-  line-height: .78;
+  font-size: clamp(76px, 14vw, 230px);
+  line-height: .8;
+  letter-spacing: -.05em;
   font-variant-numeric: tabular-nums;
 }
 
@@ -135,7 +136,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   transition: transform .6s var(--ease);
 }
 .top.is-hidden { transform: translateY(-110%); }
-.top__logo { font-family: var(--display); font-size: 24px; line-height: 1; }
+.top__logo { font-family: var(--display); font-weight: 500; font-size: 16px; line-height: 1; letter-spacing: -.02em; }
 .top__nav { display: flex; gap: 32px; margin-left: auto; font-size: 15px; }
 .top__nav a { position: relative; }
 .top__nav a::after {
@@ -197,9 +198,9 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   align-self: end;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(64px, 10.4vw, 190px);
-  line-height: .86;
-  letter-spacing: -.02em;
+  font-size: clamp(40px, 8vw, 140px);
+  line-height: .9;
+  letter-spacing: -.045em;
   color: var(--white);
   mix-blend-mode: difference;
 }
@@ -240,7 +241,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .ticker { overflow: hidden; padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .ticker__track { display: flex; width: max-content; will-change: transform; }
 .ticker__group { display: flex; align-items: center; gap: 44px; padding-right: 44px; }
-.ticker span { font-family: var(--display); font-size: clamp(44px, 6.4vw, 104px); line-height: 1; white-space: nowrap; }
+.ticker span { font-family: var(--display); font-size: clamp(28px, 4vw, 64px); letter-spacing: -.03em; line-height: 1; white-space: nowrap; }
 .ticker i { flex: none; width: 14px; height: 14px; border: 1px solid var(--white); border-radius: 50%; }
 
 /* ---------- Появление заголовков по словам ---------- */
@@ -253,7 +254,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
    ========================================================= */
 .work { padding: clamp(110px, 12vw, 180px) var(--pad) clamp(80px, 10vw, 150px); background: var(--paper); color: var(--black); }
 .work__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: clamp(48px, 6vw, 96px); }
-.work__title { font-family: var(--display); font-weight: 400; font-size: clamp(88px, 16vw, 280px); line-height: .8; letter-spacing: -.02em; }
+.work__title { font-family: var(--display); font-weight: 500; font-size: clamp(54px, 10vw, 172px); line-height: .85; letter-spacing: -.05em; }
 .work__hint { max-width: 30ch; color: var(--stone); }
 
 .case + .case { margin-top: clamp(96px, 12vw, 180px); }
@@ -266,8 +267,8 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   margin-bottom: clamp(20px, 2.4vw, 32px);
   border-bottom: 1px solid var(--line-dark);
 }
-.case__index { font-family: var(--display); font-size: 28px; line-height: 1; color: var(--stone); }
-.case__name { font-family: var(--display); font-weight: 400; font-size: clamp(56px, 8vw, 136px); line-height: .82; letter-spacing: -.015em; }
+.case__index { font-family: var(--display); font-size: 18px; line-height: 1; color: var(--stone); }
+.case__name { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 5.2vw, 88px); line-height: .9; letter-spacing: -.045em; }
 .case__type { max-width: 30ch; text-align: right; color: var(--stone); }
 
 /* сцена в цвете проекта: ноутбук и телефон */
@@ -367,7 +368,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 /* лента деталей */
 .details { margin-top: clamp(48px, 6vw, 88px); }
 .details__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px; }
-.details__head h4 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 3.4vw, 52px); line-height: 1; }
+.details__head h4 { font-family: var(--display); font-weight: 400; font-size: clamp(22px, 2.2vw, 34px); line-height: 1; letter-spacing: -.03em; }
 .details__head p { color: var(--stone); font-size: 15px; }
 .details__track {
   display: flex;
@@ -401,7 +402,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 }
 .queue__list li:last-child { border-bottom: 1px solid var(--line-dark); }
 .queue__list li:hover { padding-left: 24px; }
-.queue__word { font-family: var(--display); font-size: clamp(48px, 8vw, 128px); line-height: .9; color: rgba(0, 0, 0, .22); transition: color .5s var(--ease); }
+.queue__word { font-family: var(--display); font-size: clamp(30px, 5vw, 80px); letter-spacing: -.04em; line-height: .9; color: rgba(0, 0, 0, .22); transition: color .5s var(--ease); }
 .queue__list li:hover .queue__word { color: var(--black); }
 .queue__info { text-align: right; color: var(--stone); font-size: 15px; }
 .queue__info strong { display: block; font-weight: 500; color: var(--black); }
@@ -436,25 +437,48 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .process__side { position: sticky; top: 120px; align-self: start; }
 .process__title, .reasons__title, .about__title, .reviews__title {
   font-family: var(--display);
-  font-weight: 400;
-  line-height: .88;
-  letter-spacing: -.015em;
+  font-weight: 500;
+  line-height: .95;
+  letter-spacing: -.045em;
 }
-.process__title { font-size: clamp(64px, 8vw, 136px); max-width: 7ch; }
+.process__title { font-size: clamp(40px, 5vw, 84px); max-width: 8ch; }
 .process__lead { max-width: 36ch; margin-top: 28px; color: var(--fog); }
+/* путь из шагов: линия слева заполняется светом по мере прокрутки,
+   кружок шага загорается, когда свет до него дошёл */
+.track { position: relative; --dot: 40px; --gap: clamp(20px, 2.4vw, 36px); padding-left: calc(var(--dot) + var(--gap)); }
+.track__rail { position: absolute; left: calc(var(--dot) / 2 - 1px); top: 14px; bottom: 14px; width: 2px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.track__fill {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(246, 246, 243, .45), var(--white));
+  transform: scaleY(var(--p, 0)); transform-origin: 50% 0;
+  will-change: transform;
+}
 .steps { list-style: none; }
-.steps li { display: grid; grid-template-columns: clamp(64px, 8vw, 120px) minmax(0, 1fr); gap: 16px; padding: 28px 0; border-top: 1px solid var(--line); }
-.steps li:last-child { border-bottom: 1px solid var(--line); }
-.steps__n { font-family: var(--display); font-size: clamp(56px, 6vw, 96px); line-height: .8; color: var(--fog); transition: color .5s var(--ease); }
-.steps li:hover .steps__n { color: var(--white); }
-.steps h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 2.6vw, 42px); line-height: 1; }
-.steps p { margin-top: 10px; max-width: 44ch; color: var(--fog); }
+.steps li { position: relative; padding: 0 0 clamp(36px, 4vw, 56px); }
+.steps li:last-child { padding-bottom: 0; }
+.steps__n {
+  position: absolute; top: -6px; left: calc((var(--dot) + var(--gap)) * -1);
+  display: grid; place-items: center;
+  width: var(--dot); height: var(--dot); border-radius: 50%;
+  border: 1px solid var(--line); background: var(--black);
+  font-family: var(--display); font-size: 15px; line-height: 1; color: var(--fog);
+  transition: background-color .5s var(--ease), color .5s var(--ease), border-color .5s var(--ease), box-shadow .5s var(--ease);
+}
+.steps h3 { font-family: var(--display); font-weight: 400; font-size: clamp(20px, 1.8vw, 28px); line-height: 1.15; letter-spacing: -.03em; color: var(--fog); transition: color .5s var(--ease); }
+.steps p { margin-top: 10px; max-width: 44ch; color: #55585e; transition: color .5s var(--ease); }
+.steps li.is-on .steps__n { background: var(--white); border-color: var(--white); color: var(--black); box-shadow: 0 0 0 6px rgba(246, 246, 243, .08), 0 0 28px rgba(246, 246, 243, .45); }
+.steps li.is-on h3 { color: var(--white); }
+.steps li.is-on p { color: var(--fog); }
+/* без скрипта всё видно сразу */
+.track:not(.is-live) .track__fill { transform: none; }
+.track:not(.is-live) h3 { color: var(--white); }
+.track:not(.is-live) p { color: var(--fog); }
 
 .reasons { padding: 0 var(--pad) clamp(110px, 12vw, 180px); }
-.reasons__title { font-size: clamp(56px, 7vw, 120px); max-width: 12ch; margin-bottom: clamp(32px, 4vw, 56px); }
+.reasons__title { font-size: clamp(34px, 4.4vw, 74px); max-width: 14ch; margin-bottom: clamp(32px, 4vw, 56px); }
 .reasons__row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px; padding: 30px 0; border-top: 1px solid var(--line); }
 .reasons__row:last-child { border-bottom: 1px solid var(--line); }
-.reasons__row dt { font-family: var(--display); font-size: clamp(32px, 3.4vw, 54px); line-height: 1; }
+.reasons__row dt { font-family: var(--display); font-size: clamp(20px, 2vw, 32px); line-height: 1.1; letter-spacing: -.03em; }
 .reasons__row dd { max-width: 48ch; color: var(--fog); font-size: 18px; }
 
 /* =========================================================
@@ -468,22 +492,22 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   background: var(--graphite);
 }
 .about__side { position: sticky; top: 120px; align-self: start; }
-.about__title { font-size: clamp(56px, 7vw, 124px); max-width: 10ch; }
+.about__title { font-size: clamp(34px, 4.4vw, 76px); max-width: 12ch; }
 .about__lead { margin-top: 0; max-width: 34ch; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.4; }
 .about__p { margin-top: 20px; max-width: 52ch; color: var(--fog); }
 .path { list-style: none; margin-top: 56px; counter-reset: path; }
 .path li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); }
 .path li:last-child { border-bottom: 1px solid var(--line); }
-.path strong { font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; }
+.path strong { font-family: var(--display); font-weight: 400; font-size: 18px; line-height: 1.2; letter-spacing: -.02em; }
 .path span { color: var(--fog); }
 
 /* =========================================================
    Отзывы
    ========================================================= */
 .reviews { padding: clamp(110px, 12vw, 180px) var(--pad); background: var(--paper); color: var(--black); }
-.reviews__title { font-size: clamp(72px, 12vw, 200px); line-height: .8; }
+.reviews__title { font-size: clamp(48px, 8vw, 132px); line-height: .85; }
 .review { max-width: 1000px; padding: 40px 0; border-bottom: 1px solid var(--line-dark); }
-.review__text { font-family: var(--display); font-size: clamp(30px, 3.4vw, 52px); line-height: 1.1; }
+.review__text { font-weight: 500; font-size: clamp(26px, 2.8vw, 42px); line-height: 1.12; letter-spacing: -.03em; }
 .review__who { margin-top: 18px; color: var(--stone); }
 .review__who strong { color: var(--black); font-weight: 500; }
 .reviews__empty {
@@ -495,7 +519,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   padding-top: 28px;
   border-top: 1px solid var(--line-dark);
 }
-.reviews__empty p:first-child { font-family: var(--display); font-size: clamp(30px, 3vw, 48px); line-height: 1.05; }
+.reviews__empty p:first-child { font-family: var(--display); font-size: clamp(22px, 2.1vw, 34px); line-height: 1.1; letter-spacing: -.035em; }
 .reviews__offer { max-width: 40ch; color: var(--stone); }
 
 /* =========================================================
@@ -505,9 +529,10 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .contact__big {
   display: block;
   font-family: var(--display);
-  font-size: clamp(76px, 15vw, 270px);
-  line-height: .84;
-  letter-spacing: -.02em;
+  font-size: clamp(42px, 8vw, 150px);
+  line-height: .9;
+  font-weight: 500;
+  letter-spacing: -.05em;
 }
 .contact__line { display: block; }
 .contact__line:last-child { padding-left: 12vw; display: flex; align-items: center; gap: .15em; }
@@ -555,7 +580,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 @media (max-width: 760px) {
   body { font-size: 16px; }
   .top { gap: 12px; padding: 16px var(--pad); }
-  .top__logo { font-size: 20px; }
+  .top__logo { font-size: 14px; }
   .top__nav { display: none; }
   .pill { margin-left: auto; padding: 9px 16px; font-size: 14px; }
 
@@ -567,7 +592,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
     -webkit-mask-image: linear-gradient(to top, transparent 0, #000 40%);
     mask-image: linear-gradient(to top, transparent 0, #000 40%);
   }
-  .hero__title { grid-row: 3; font-size: 15.5vw; mix-blend-mode: normal; text-shadow: 0 2px 30px rgba(0, 0, 0, .5); }
+  .hero__title { grid-row: 3; font-size: 13vw; mix-blend-mode: normal; text-shadow: 0 2px 30px rgba(0, 0, 0, .5); }
   .hero__bottom { position: relative; z-index: 1; }
   .line--2 { padding-left: 0; }
   .hero__bottom { grid-row: 4; flex-direction: column; align-items: stretch; }
@@ -624,4 +649,71 @@ body::after {
   pointer-events: none;
   opacity: .05;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* =========================================================
+   Реальный заказ: метка, цитата клиента, отзывы
+   ========================================================= */
+.case__type p { margin: 0; }
+.case__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-bottom: 10px; padding: 6px 12px;
+  border-radius: 999px; background: var(--black); color: var(--white);
+  font-size: 13px; line-height: 1.2; text-align: left;
+}
+.case__badge i { flex: none; width: 7px; height: 7px; border-radius: 50%; background: #5fe08f; box-shadow: 0 0 0 4px rgba(95, 224, 143, .18); }
+
+.case__main { display: grid; gap: clamp(28px, 3vw, 44px); align-content: start; }
+.case__quote { margin: 0; padding-left: clamp(18px, 2vw, 28px); border-left: 2px solid var(--black); }
+.case__quote p { font-weight: 500; font-size: clamp(21px, 1.9vw, 30px); line-height: 1.2; letter-spacing: -.025em; }
+.case__quote a { display: inline-block; margin-top: 14px; color: var(--stone); font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--line-dark); transition: color .3s var(--ease), border-color .3s var(--ease); }
+.case__quote a:hover { color: var(--black); border-color: var(--black); }
+
+.review { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(16px, 3vw, 48px); max-width: 1100px; margin-top: clamp(40px, 5vw, 72px); padding: 40px 0 44px; border-top: 1px solid var(--line-dark); border-bottom: 0; }
+.review__mark { font-family: var(--display); font-weight: 500; font-size: clamp(72px, 8vw, 120px); line-height: .8; color: var(--black); }
+.review__body { display: grid; gap: 18px; }
+.review .review__text { margin-bottom: 10px; font-size: clamp(28px, 3vw, 46px); line-height: 1.1; }
+.review__p { max-width: 64ch; font-size: 18px; line-height: 1.6; color: #2b2d31; }
+.review__who { grid-column: 2; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 28px; }
+.review__link { color: var(--black); text-decoration: none; border-bottom: 1px solid var(--line-dark); transition: border-color .3s var(--ease); }
+.review__link:hover { border-color: var(--black); }
+
+@media (max-width: 700px) {
+  .review { grid-template-columns: 1fr; }
+  .review__mark { font-size: 96px; height: .5em; }
+  .review__who { grid-column: 1; }
+  .review__p { font-size: 16px; }
+}
+
+/* =========================================================
+   Фишки: зерно, «живое» имя, проявление текста, заливка контактов
+   ========================================================= */
+/* плёночное зерно поверх страницы */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none;
+  opacity: .06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* имя в первом экране: буквы у курсора становятся жирнее */
+.hero__title .ch { font-variation-settings: "wght" var(--w, 400); }
+
+/* «Обо мне»: текст проявляется словами при прокрутке */
+.reveal .rw { color: rgba(246, 246, 243, .18); transition: color .35s linear; }
+.reveal .rw.is-on { color: var(--white); }
+
+/* «Обсудим ваш проект»: контур, который заливается белым по мере прокрутки */
+.contact__text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(246, 246, 243, .4);
+  background: linear-gradient(var(--white), var(--white)) 0 0 / var(--fill, 0%) 100% no-repeat;
+  -webkit-background-clip: text; background-clip: text;
+  padding-bottom: .22em; margin-bottom: -.22em;
+}
+.contact__line:nth-child(1) .contact__text { --fill: var(--fill1, 0%); }
+.contact__line:nth-child(2) .contact__text { --fill: var(--fill2, 0%); }
+.contact__big:hover .contact__text { --fill: 100%; transition: background-size .6s var(--ease); }
+@media (prefers-reduced-motion: reduce) {
+  .contact__text { color: var(--white); -webkit-text-stroke: 0; background: none; }
+  .reveal .rw { color: inherit; }
 }

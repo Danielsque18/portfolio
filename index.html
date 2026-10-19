@@ -8,12 +8,10 @@
   <meta name="description" content="Проектирую и делаю сайты для малого бизнеса: дизайн, вёрстка, мобильная версия и запуск. Омск.">
   <meta property="og:title" content="Даниил Демьянов — сайты для малого бизнеса">
   <meta property="og:description" content="Дизайн, вёрстка и запуск сайта одним человеком, без посредников.">
-  <meta property="og:image" content="images/ns-hero.jpg">
+  <meta property="og:image" content="images/sd-hero.jpg">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%23000'/><text x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23f6f6f3'>Д</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%23000'/><text x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='32' fill='%23f6f6f3'>Д</text></svg>">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -88,6 +86,8 @@
         <h2 class="process__title" id="processTitle">Как я работаю</h2>
         <p class="process__lead">Одностраничные сайты и сайты-визитки: дизайн, вёрстка, мобильная версия и публикация в интернете.</p>
       </div>
+      <div class="track" id="track">
+        <div class="track__rail" aria-hidden="true"><i class="track__fill" id="trackFill"></i></div>
       <ol class="steps">
         <li><span class="steps__n">1</span><div><h3>Знакомство</h3><p>Узнаю, чем занимается бизнес, кто ваши клиенты и что должен делать сайт.</p></div></li>
         <li><span class="steps__n">2</span><div><h3>Договорённости</h3><p>Называю срок и стоимость до начала работы. Всё фиксируем в переписке.</p></div></li>
@@ -95,6 +95,7 @@
         <li><span class="steps__n">4</span><div><h3>Сборка и проверка</h3><p>Собираю сайт и проверяю его на телефоне и на компьютере.</p></div></li>
         <li><span class="steps__n">5</span><div><h3>Запуск</h3><p>Публикую сайт в интернете и объясняю, как менять тексты и цены.</p></div></li>
       </ol>
+      </div>
     </section>
 
     <section class="reasons" aria-labelledby="reasonsTitle">
@@ -119,7 +120,7 @@
           <li><strong>Омский лицей №92</strong><span>Окончил школу.</span></li>
           <li><strong>ОмГТУ</strong><span>Программная инженерия, первый курс.</span></li>
           <li><strong>Школа 21</strong><span>Прошёл бассейн, дальше основной этап обучения.</span></li>
-          <li><strong>Сайты для бизнеса</strong><span>Первые проекты, портфолио растёт.</span></li>
+          <li><strong>Сайты для бизнеса</strong><span>Первый заказ запущен: барбершоп SEDOY. Портфолио растёт.</span></li>
         </ol>
       </div>
     </section>
@@ -139,8 +140,8 @@
     <section class="contact" id="contact" aria-labelledby="contactTitle">
       <h2 class="visually-hidden" id="contactTitle">Контакты</h2>
       <a href="#" class="contact__big" data-tg>
-        <span class="contact__line">Обсудим</span>
-        <span class="contact__line">ваш проект<span class="contact__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        <span class="contact__line"><span class="contact__text">Обсудим</span></span>
+        <span class="contact__line"><span class="contact__text">ваш проект</span><span class="contact__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
       </a>
       <div class="contact__row">
         <p class="contact__note">Отвечаю в Telegram в течение дня. Расскажите, чем занимается бизнес, и я предложу, каким может быть сайт.</p>
